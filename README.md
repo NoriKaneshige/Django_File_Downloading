@@ -17,3 +17,17 @@ class UploadFile(models.Model):
     def __str__(self):
         return self.file.url
 ```
+
+> ## admin.py
+``` python
+from django.contrib import admin
+from .models import UploadFile
+
+admin.site.register(UploadFile)
+```
+
+> ## views.py
+``` python
+
+
+```
