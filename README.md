@@ -98,7 +98,22 @@ urlpatterns = [
 ]
 ```
 
-> ## fileupload_lists.html
+> ## uploadfile_list.html
 ``` python
+<!-- {% for uploadfile in uploadfile_list %}
+        <a href="{% url 'app:download' uploadfile.pk %}">{{ uploadfile }}</a>
+        <hr>
+{% endfor %}
+ -->
 
+
+<form action="{% url 'app:download_zip' %}" method="POST">
+        {% for uploadfile in uploadfile_list %}
+            <a href="{% url 'app:download' uploadfile.pk %}">{{ uploadfile }}</a>
+            <input type="checkbox" name="zip" value="{{ uploadfile.pk }}">
+            <hr>
+        {% endfor %}
+        {% csrf_token %}
+        <button type="submit">ZIP_download</button>
+</form>
 ```
