@@ -1,7 +1,6 @@
 # Django_File_Downloading
 
-referred blog
-https://narito.ninja/blog/detail/93/
+[referred blog](https://narito.ninja/blog/detail/93/)
 
 ![download_as_it_is](download_as_it_is.gif)
 
